@@ -1,0 +1,1357 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/*CSS reset end*/
+
+/*Google and External Font Stack*/
+@font-face {
+  font-family: 'Satisfy', cursive;
+}
+@font-face {
+	font-family: 'Khand', Georgia,verdana, sans-serif;
+}
+
+@font-face { /* Retrieved at: https://fonts.google.com/?query=open+sans&selection.family=Open+Sans */
+	font-family: opensans;
+	src: url(font/opensans.woff);
+}
+/*Google and External Font Stack End*/
+
+/* background image: the whole page content is wrapped in a div called #lee */
+#lee{
+	background-image: url(images/others/noise.png); /* source - https://www.cssmatic.com/noise-texture */
+	background-size:contain;
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+/*Masthead*/
+
+#head-bar h1{
+  color: #ffffff;
+  font-size: 3rem;
+  font-family: Satisfy, cursive;
+}
+#head-bar a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#head-bar{
+  background-color: #000000;
+  width: 100%;
+	position: fixed;
+	z-index: 100;
+	box-shadow: 0 0.1875rem 0.625rem rgba(0,0,0,0.4);
+}
+
+main{
+	position: relative;
+}
+
+.masthead{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+	margin: 0px 2rem 0px 2rem;
+}
+.life-lee{
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	margin: 1rem 0px 1rem 0px;
+}
+.page{
+  width: 90%; /*1100px*/
+  margin: 0 auto;
+}
+#burger{
+	color: #ffffff;
+	font-size: 2rem;
+	display: none;
+}
+nav ul{
+  list-style-type:none;
+
+}
+
+nav li{
+  display: inline;
+}
+
+nav a{
+  font-family: opensans, Georgia, verdana, sans-serif;
+	font-weight:bold;
+  margin-left:1rem;
+	padding: 0.58rem;
+}
+
+nav a:visited{
+  color:#FF0000;
+}
+nav a:hover{
+  color: #ffffff;
+  border-bottom: 0.0625rem solid #ffffff;
+  border-top: 0.0625rem solid #ffffff;
+  border-radius: 0.31rem;
+  position:relative;
+  bottom: 0.31rem;
+}
+nav a:focus{
+  color: #ED6A5A;
+  top:0.31rem;
+}
+
+/*Masthead End*/
+
+
+/* Slideshow using Slick Carousel */
+
+#main-box{
+  width: 100%;
+  position: relative;
+  margin-bottom: 1.25rem;
+	padding-top: 6.2rem;
+}
+#main-box img{
+	width: 100%;
+}
+#main-box a{
+  color: #ffffff;
+  font-size: 2rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 40%;
+  left: 5%;
+	text-decoration: none;
+	font-family: opensans, Georgia, verdana, sans-serif;
+}
+#main-box a:hover{
+	color: #505050;
+	transition: color 1s;
+	background-color: rgba(0, 0, 0, 1);
+}
+#main-box a:focus{
+	color: #ff0000;
+}
+
+/*Slideshow end*/
+
+
+/* Index content Style */
+.content{
+	background-color: rgba(255, 255, 255, 0.3);
+  padding: 0.625rem;
+  min-height: 100px;
+	box-shadow:0.1875rem 0.1875rem 0.625rem rgba(0,0,0,0.05);
+
+
+  /*border-bottom: 1px solid #000000;*/
+  margin-bottom: 5rem;
+  /*border: 3px solid black;*/
+}
+.content a{
+  text-decoration: none;
+}
+
+/*targeting all h2 and h2 which are also a link */
+.content h2 a{
+  font-size: 2rem;
+	font-weight: bolder;
+  margin-bottom: 0.25rem;
+  padding: 0.25rem;
+  color:#232C33;
+  font-family: opensans, Georgia, verdana, sans-serif;
+  text-align: left;
+}
+.content h2 a:hover{
+  color: #5F666B;
+}
+.content h2 a:focus{
+  color:#C53211;
+}
+
+.one{
+	border-radius: 0.625rem;
+	margin-top: 3.75rem;
+}
+/* flexible iframe - tutorial used: https://www.youtube.com/watch?v=S2somuB5KJI */
+.youtube{
+	position: relative;
+	padding-bottom: 60.2597403%;
+}
+.youtube:before{
+	display: block;
+	content: "";
+}
+.youtube iframe{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.two, .three, .four, .five{ /* targeting the second to fifth content */
+	border-radius: 0.625rem;
+}
+
+.two p, .five p{ /* targerting biography and about the creator glimphs */
+	color: #737A7E;
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-family: opensans, Georgia, verdana, sans-serif;
+  padding-bottom: 0.625rem;
+}
+.two img{
+	max-width: 100%;
+}
+.case{ /* class of case was applied to both biography and about the creator READ MORE glimphs */
+	padding: 1rem;
+}
+.case p{
+	text-align: right;
+}
+.case a{
+	color: #ffffff;
+  padding:10px;
+  background-color:#C53211;
+}
+.case a:hover{
+  background-color: #ffffff;
+  color: #C53211;
+  box-shadow:0px 0px 0.625rem rgba(255,0,0,0.4);
+}
+.case a:focus{
+	color:#060606;
+}
+
+.anime, .moves{
+  margin: 1.25rem 0px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+.anime p, .moves p{
+  width: 100%;
+  margin-bottom: 0.3rem;
+  text-align: center;
+  font-family: opensans, Georgia, verdana, sans-serif;
+}
+.anime img, .moves img{
+	margin: 1rem;
+	max-width: 100%;
+  box-shadow:0.1875rem 0.1875rem 0.4375rem rgba(0,0,0,0.3);
+  border-radius: 0.3125rem;
+}
+.more-anime, .more-moves{
+	width: 150px;
+	height: 225px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(images/anime/ffour.png);
+	background-position: center;
+	border-radius: 0.625rem;
+	margin: 1rem;
+}
+
+.plus{
+	font-size: 7rem;
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 95%;
+	height: 95%;
+	border-radius: 0.625rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.plus a{
+	text-decoration: none;
+	color: #bdb9b9;
+}
+.plus a:hover{
+	color: #ffffff;
+}
+.plus a:focus{
+	color:#ff0000;
+}
+
+.creator{
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+.creator-text{
+	flex: 2;
+}
+.five img{
+	max-width: 100%;
+	margin-bottom: 1rem;
+}
+.five h2{
+	margin-bottom: 1rem;
+}
+.five p{
+	margin: 1.5rem 0px 0px 1rem;
+}
+
+#base{ /*base is a template container for pages that have aside */
+	padding: 0rem 0.625rem;
+  display: flex;
+	flex-flow: row wrap;
+}
+
+.contents{
+  flex:3;
+}
+/*Index content style End*/
+
+/*sidebar style */
+aside{
+	flex:1;
+  padding-top: 0.625rem;
+}
+
+aside h2{
+  color:#232C33;
+  font-size: 2rem;
+  font-style: oblique;
+  font-weight: bold;
+  font-family: Khand, Georgia,verdana, sans-serif;
+}
+.source{
+	margin-bottom: 2rem;
+}
+#side-bar{
+	margin: 2.5rem 0rem 0.625rem 2rem;
+}
+
+.bar{
+  margin-bottom: 1rem;
+  min-height: 12.5rem;
+  background-color: yellow;
+}
+
+.v{
+  background-image: url(images/blog/v.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items:flex-end;
+}
+
+.v p,.w p,.x p,.y p,.z p{
+  font-size: 1rem;
+  padding: 0.625rem;
+  color: white;
+  font-weight: bold;
+  font-family: opensans, Georgia, verdana, sans-serif;
+  text-align: left;
+  background-color: rgba(0,0,0,0.5);
+	width: 100%;
+}
+
+
+.v a, .w a, .x a, .y a, .z a{
+  text-decoration: none;
+  color: #ffffff;
+}
+.v a:link, .w a:link, .x a:link, .y a:link, .z a:link{
+  color: #ffffff;
+}
+.v a:visited, .w a:visited, .x a:visited, .y a:visited, .z a:visited{
+  color: #ffffff;
+}
+.v a:hover, .w a:hover, .x a:hover, .y a:hover, .z a:hover{
+  color: #C53211;
+}
+.v a:focus, .w a:focus, .x a:focus, .y a:focus, .z a:focus{
+  color:#ffffff;
+}
+
+.w{
+  background-image: url(images/blog/w.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items:flex-end;
+}
+
+.x{
+  background-image: url(images/blog/x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items:flex-end;
+}
+
+.y{
+  background-image: url(images/blog/y.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items:flex-end;
+}
+
+.z{
+  background-image: url(images/blog/z.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items:flex-end;
+}
+.source{
+	text-align: right;
+	font-family: opensans, Georgia, verdana, sans-serif;
+	color: #737A7E;
+	font-size: 0.75rem;
+	padding-right: 0.625rem;
+}
+
+footer{
+  background-color: #000000;
+  min-height: 12.5rem;
+	font-family: opensans, Georgia, verdana, sans-serif;
+	box-shadow: -0.1875rem 0 0.625rem rgba(0,0,0,0.5);
+
+}
+#icons{
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem 0rem;
+	flex:3;
+}
+#icons img{
+	max-width: 100%;
+	margin: 0.5rem 1rem 1rem 0rem;
+	opacity: 0.5;
+}
+#icons img:hover{
+	opacity:1;
+	transition: opacity 0.5s;
+}
+#to-top{
+	flex:1;
+}
+#footer-content{
+	display: flex;
+	flex-flow: row wrap;
+	padding-top: 1rem;
+}
+.disclaimer, #to-top{
+	color: #ffffff;
+	font-size: 0.8rem;
+	text-align: center;
+}
+
+/* Specifics to Bio.html */
+
+/* Strap-Line for all pages*/
+#banner{
+	width:100%;
+	padding: 6rem 0rem 0rem 0rem;
+	margin-bottom: 1rem;
+}
+#banner h2{
+	font-weight: bolder;
+	font-size: 2rem;
+	text-align: Left;
+	padding: 1rem 2rem;
+	background-color: #ffffff;
+	color: #060606;
+	font-family: opensans, Georgia, verdana, sans-serif;
+}
+/* Strap-Line End */
+
+.based{
+	background-color: rgba(255, 0, 0, 0.1);
+}
+.based h2{
+	padding: 1rem;
+	font-size: 2rem;
+	font-weight: bolder;
+	font-family: Calibri, Georgia, verdana, sans-serif;
+}
+.based p{
+	color: #060606;
+	font-family: opensans, Georgia, verdana, sans-serif;
+	line-height: 1.7rem;
+	padding: 1rem;
+}
+.based-pic{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+
+}
+.based-pic img{
+	max-width: 100%;
+	margin: 1rem 1.5rem;
+	box-shadow: 0.1875rem 0.1875rem 0.4375rem rgba(0,0,0,0.3);
+	opacity: 1;
+}
+.based-pic img:hover{
+	opacity:0.5;
+	transition: opacity 1s;
+}
+.heroed img{
+	width: 100%;
+}
+.based a{
+	text-decoration: none;
+	color:#C53211;
+}
+.based a:hover{
+	color: #808080;
+}
+#accolade{
+	padding-bottom: 2rem;
+}
+table{
+  font-family:  opensans, Georgia, verdana, sans-serif;
+  border-collapse: collapse;
+	padding: 0rem 2rem 2rem 2rem;
+	margin: 0 auto;
+	margin: 0 1rem;
+}
+table th{
+	font-weight: bold;
+}
+
+table td, th{
+  border: 0.1rem solid #ffffff;
+  text-align: left;
+	padding: 0.3rem;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255,255,255,0.3);
+}
+/* Specifics to Bio.html end */
+
+/* Specifics to comics.html */ /* Tooltip was discovered at https://www.w3schools.com/css/tryit.asp?filename=trycss_tooltip */
+.comic-list{ /* this class was applied to both comic and movie.html */
+	margin-top:2.7rem;
+	margin-bottom: 1rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.3);
+  padding: 0.625rem;
+	box-shadow:0.1875rem 0.1875rem 0.625rem rgba(0,0,0,0.05);
+	border-radius: 0.5rem;
+	flex: 3;
+	height: 100%;
+}
+.comic-list p{
+  text-align: center;
+  font-family: opensans, Georgia, verdana, sans-serif;
+}
+.comic-list img{
+	margin: 1rem;
+	max-width: 100%;
+  box-shadow:0.1875rem 0.1875rem 0.4375rem rgba(0,0,0,0.3);
+  border-radius: 0.3125rem;
+}
+.comic-list img:hover{
+		cursor: pointer;
+}
+
+/* List of each comics styled */
+.cap-1941{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:1;
+}
+.ff-1961{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:7;
+}
+.hulk-1962{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:12;
+}
+.fant{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:6;
+}
+.Mutant-1963{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:24;
+}
+.spider-2006{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:10;
+}
+.spider-1963{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:9;
+}
+.spider-1962{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:8;
+}
+.sliver-2013{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:23;
+}
+.thor-2009{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:22;
+}
+.wartime-1941{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:21;
+}
+.ironman-2010{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:20;
+}
+.spider-2017{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:11;
+}
+.chakra-2015{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:19;
+}
+.hulk-2016{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:13;
+}
+.monster-2017{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:14;
+}
+.devil-2017{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:15;
+}
+.xmen-2018{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:16;
+}
+.strange-2017{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:17;
+}
+.torch-2018{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:18;
+}
+.pool-2009{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:5;
+}
+.zero-2014{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:3;
+}
+.ant-2018{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:2;
+}
+.lucky-2016{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:4;
+}
+.tooltiptext{
+	visibility: hidden;
+	width: 11rem;
+	background-color: #ffffff;
+  color: #060606;
+  border-radius: 0.5rem;
+	padding: 0.5rem;
+	position: absolute;
+	z-index: 1;
+	top: 30%;
+	left: 80%;
+	margin-left: -10rem;
+	opacity: 0;
+  transition: opacity 1s;
+}
+
+.cap-1941:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.ff-1961:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.hulk-1962:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.fant:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.Mutant-1963:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.spider-2006:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.spider-1963:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.spider-1962:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.sliver-2013:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.thor-2009:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.wartime-1941:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.ironman-2010:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.spider-2017:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.chakra-2015:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.hulk-2016:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.monster-2017:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.devil-2017:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.xmen-2018:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.strange-2017:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.torch-2018:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.pool-2009:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.zero-2014:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.ant-2018:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.lucky-2016:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.tooltiptext h2, p{
+	font-family: opensans, Georgia, verdana, sans-serif;
+}
+.tooltiptext h2{
+	font-weight: bolder;
+	font-size: 1.5rem;
+	padding: 0.3rem;
+	margin-bottom: 0.5rem;
+	border-bottom: 0.2rem dotted red;
+}
+.tooltiptext p{
+	text-align: left;
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+
+.tooltiptext a{
+	text-decoration: none;
+	color: red;
+	font-size: 1.3rem;
+}
+/* Specifics to comics.html end here */
+
+/* Specifics to Movies.html */
+.endgame{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:1;
+}
+.endgame:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+
+.aveng{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:2;
+}
+.aveng:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+
+.ddveil{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:3;
+}
+.ddveil:hover .tooltiptext{
+		visibility: visible;
+	  opacity: 1;
+}
+
+.guard{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:4;
+}
+.guard:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+
+.glx{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:5;
+}
+.glx:hover .tooltiptext{
+	visibility: visible;
+	opacity: 1;
+}
+.ant{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:6;
+}
+.ant:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.antwp{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:7;
+}
+.antwp:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.america{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:8;
+}
+.america:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.dpool{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:9;
+}
+.dpool:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.ddpool{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:10;
+}
+.ddpool:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.hor{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:11;
+}
+.hor:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.thor-13{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:12;
+}
+.thor-13:hover .tooltiptext{
+	visibility: visible;
+	opacity: 1;
+}
+.panther{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:13;
+}
+.panther:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.menxx{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:14;
+}
+.menxx:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.menx{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:15;
+}
+.menx:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.doctor{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:16;
+}
+.doctor:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.homecoming{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:17;
+}
+.homecoming:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.nick{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:18;
+}
+.nick:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.fantastic{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:19;
+}
+.fantastic:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.generator{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:20;
+}
+.generator:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.carter{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:21;
+}
+.carter:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.hulk-man{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:22;
+}
+.hulk-man:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.irond{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:23;
+}
+.irond:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+.irons{
+	position: relative;
+	margin-bottom: 1.5rem;
+	order:24;
+}
+.irons:hover .tooltiptext{
+	visibility: visible;
+  opacity: 1;
+}
+/* specifics to movies.html ends here */
+
+/* Making the more anime and movies link the last on the list in index.html */
+.more-moves{
+	order:30;
+}
+.more-anime{
+	order:30;
+}
+/* Ending of Making the more anime and movies link the last on the list */
+
+/* Specifics to blog.html */
+#headlines{
+	padding-top: 2rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	flex:3;
+	margin: 0 auto;
+}
+#headlines img{
+	max-width:100%;
+}
+
+.highlights{
+	width: 20rem;
+	flex: 0.5 1 auto;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 0.5rem;
+	margin: 1rem;
+	border-radius: 0.5rem;
+	box-shadow:0.1875rem 0.1875rem 0.625rem rgba(0,0,0,0.05);
+
+}
+.highlights a{
+	font-family: opensans, Georgia, verdana, sans-serif;
+	text-decoration: none;
+	color: #060606;
+	font-size: 1.5rem;
+	font-weight: bolder;
+	text-align: center;
+	padding: 1rem 0rem;
+}
+.highlights a:hover{
+	color:#696969;
+}
+.highlights p{
+	font-size: 0.85rem;
+	color: #909090;
+	font-weight: bold;
+}
+
+/*Specifics to all newspost*/
+.newspost{
+	flex:3;
+	padding-top: 7.6rem;
+}
+.trend-aside{
+	padding-top:10.5rem;
+}
+.newspost h2{
+	font-family: opensans, Georgia, verdana, sans-serif;
+	font-size: 2rem;
+	font-weight: bolder;
+}
+.articlebody p{
+	font-family: opensans, Georgia, verdana, sans-serif;
+	line-height: 1.7rem;
+	font-size: 1rem;
+	padding:1rem 1.5rem;
+}
+.drop:first-letter{ /* code applied from: https://webdesign.tutsplus.com/tutorials/better-css-drop-caps-with-initial-letter--cms-26350 */
+	float: left;
+	font-size: 3.5rem;
+	line-height: 0.9rem;
+	margin: 1.2rem 0.2rem 0rem 0.1rem;
+	font-weight: bold;
+}
+.articlebody h3{
+	font-family: opensans, Georgia, verdana, sans-serif;
+	font-weight: bold;
+	font-size: 1.5rem;
+	border-top: 0.05rem solid #060606;
+	padding: 2.5rem 0 1rem 0rem;
+	font-weight: bold;
+}
+.author{
+	padding-bottom: 1rem;
+}
+.newspost img{
+	max-width: 100%;
+}
+.post{
+	margin-top: 7.5rem;
+}
+.article-footer{
+	font-size: 1.5rem;
+	padding: 1rem 0rem 2rem 1rem;
+}
+.article-footer a{
+	font-weight: bold;
+	color:#060606;
+}
+
+/*Specifics to all neswpost end*/
+
+/*Specifics to Memorywall.html */
+.social-post{
+	margin-top: 1rem 2rem;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-content: center;
+	flex:3;
+}
+.twitter-memory {
+	flex: 1 1 auto;
+	width:13rem;
+	margin: 1rem;
+	box-shadow:0.1875rem 0.1875rem 0.625rem rgba(0,0,0,0.05);
+	background-color: #ffffff;
+	border-radius: 0.5rem;
+}
+
+/* Ending of Memorywall.html */
+
+/*Specifics to About.html*/
+#school-icon{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+#cv{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+#school-icon img{
+	margin: 2rem 0rem;
+}
+.sub{
+	font-weight: bold;
+}
+.dexed{
+	display: flex;
+	flex-flow: row wrap;
+	text-align: center;
+	align-items: center;
+}
+#photoshop, #indesign, #corel, #invision, #premier, #webs, #p5js, #csharp{
+	margin: 0rem 2rem;
+}
+#photoshop h2, #indesign h2, #corel h2, #invision h2, #premier h2, #webs h2, #p5js h2, #csharp h2{
+	margin: 2rem 0rem;
+}
+#premier p{
+	text-align: right;
+	padding-left: 0;
+}
+#porto{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+.folio{
+	margin:1rem 2rem;
+}
+#rebd{
+	font-family: opensans, Georgia, verdana, sans-serif;
+	font-weight: bold;
+	font-size: 1.5rem;
+	padding: 2.5rem 0 1rem 0rem;
+	font-weight: bold;
+}
+.doubled img{
+	margin: 0rem 0.5rem;
+}
+.quadled img{
+	margin: 0.5rem 4rem;
+}
+/*Specifics to About.html Ends here*/
+
+/* Media Queries */
+@media screen and (min-width: 1100px){
+	.page{
+		width: 1100px;
+	}
+}
+@media screen and (max-width:950px){
+	#main-box{
+		margin-bottom: 0.2rem;
+		padding-top: 8.5rem;
+	}
+	.masthead{
+		align-items: center;
+		flex-flow: column wrap;
+	}
+	nav{
+		margin-bottom: 1rem;
+	}
+	#banner{
+		padding: 8rem 0 0 0;
+	}
+	.newspost{
+			padding-top: 10rem;
+	}
+	.twitter-memory{
+		margin:0 auto;
+		margin:0rem 1.5rem;
+	}
+	.headlines{
+		margin:0 auto;
+	}
+	#base{
+		flex-flow: column wrap;
+	}
+	#side-bar{
+		margin: 0;
+		padding: 0;
+	}
+}
+
+@media screen and (max-width:845px){
+	#main-box{
+		padding-top: 7.7rem;
+	}
+	#banner{
+		padding: 8rem 0 0 0;
+	}
+	.newspost{
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width:705px){
+	.page{
+		width: 100%;
+	}
+	.life-lee{
+		width: 90%;
+		margin-bottom: 1.5rem;
+		align-items: center;
+		justify-content: space-between;
+	}
+	nav li{
+		display: block;
+		margin-bottom: 2rem;
+		text-align: center;
+	}
+	#burger{
+		display: block;
+	}
+	#burger:hover{
+		cursor:pointer;
+	}
+	.masthead{
+		width: 100%;
+		margin: 0rem;
+	}
+	nav ul{
+		display: none;
+	}
+	.open{
+	display: block;
+	}
+}
+@media screen and (max-width:420px){
+	.creator{
+		flex-flow: column wrap;
+	}
+	.headlines{
+		width:100%;
+	}
+	#head-bar h1{
+		font-size: 2rem;
+	}
+	#banner{
+		padding: 6rem 0 0 0;
+	}
+	#main-box{
+		padding-top: 6.7rem;
+	}
+}
+@media screen and (max-width:380px){
+	.life-lee img{
+		display:none;
+	}
+	#main-box{
+		padding-top: 6.4rem;  /* the masthead has a fixed position and main has a relative position which made everything else to go up under the masthead. the solution i could resolve was to keep adjusting the padding-top*/
+	}
+}
