@@ -26,6 +26,33 @@ time, mark, audio, video {
 }
 /*CSS reset end*/
 
+/* NOTE: ScrollMagic */
+.digit {
+		opacity: 0;
+						-webkit-transform: scale(0.9);
+							 -moz-transform: scale(0.9);
+								-ms-transform: scale(0.9);
+								 -o-transform: scale(0.9);
+		-webkit-transition: all 0.6s ease-out;
+			 -moz-transition: all 0.6s ease-out;
+				-ms-transition: all 0.6s ease-out;
+				 -o-transition: all 0.6s ease-out;
+						transition: all 0.6s ease-out;
+	}
+	.digit.visible {
+		opacity: 1;
+		-webkit-transform: none;
+			 -moz-transform: none;
+				-ms-transform: none;
+				 -o-transform: none;
+						transform: none;
+	}
+
+
+
+
+
+
 /*Google and External Font Stack*/
 @font-face {
   font-family: 'Satisfy', cursive;
